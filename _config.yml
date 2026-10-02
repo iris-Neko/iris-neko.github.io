@@ -1,0 +1,21 @@
+title: "iris-Neko · 技术笔记"
+description: "记录软件配置、自动化与问题排查中的可复用经验。"
+url: "https://iris-neko.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: America/Los_Angeles
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /posts/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md
+  - .gitignore

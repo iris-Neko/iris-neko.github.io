@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="intro">
+  <p class="eyebrow">TECHNICAL NOTES</p>
+  <h1>技术复盘与实践记录</h1>
+  <p>记录软件配置、自动化与问题排查中的可复用经验。</p>
+</section>
+<section class="post-list" aria-label="文章列表">
+  {% for post in site.posts %}
+  <article class="post-card">
+    <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><span>技术复盘</span></div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+    <p>{{ post.description }}</p>
+    <div class="card-bottom"><div class="tags">{% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}</div><a class="read-link" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">阅读全文 <span aria-hidden="true">→</span></a></div>
+  </article>
+  {% endfor %}
+</section>
